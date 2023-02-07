@@ -30,7 +30,17 @@ class Sequence(Composite):
         :param blackboard: Blackboard with the current state of the problem
         :return: The result of the execution
         """
+        child_position = self.additional_information(blackboard, 0)
 
-        # Missing implementation
+        while child_position < len(self.children):
+            node = self.children[child_position]
+            result = node.run(blackboard)
 
-        return self.report_failed(blackboard, 0)
+            if result == ResultEnum.FAILED:
+                return self.report_failed(blackboard, 0)
+            elif result == ResultEnum.RUNNING:
+                return self.report_running(blackboard, child_position)
+
+            child_position+=1
+
+        return self.report_succeeded(blackboard, 0)

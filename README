@@ -1,0 +1,22 @@
+## Architecture
+The skeleton of the project is very powerful in how it structures classes on top of one another.
+I used that to my advantage with some tweaks to complete this assignment.
+
+### Edits on existing files
+- I completed the missing implementation of the composite sequence and priority.
+- For priority, I added an instance attribute to treenode "priority" which is
+used in the constructor of priority to sort the list.
+- I added a file to the library that implements the until fail decorator
+
+### tasks and conditions
+- Every task is implemented as a subclass of task.
+- I implement tasks on the root level, each in its file and import accordingly in main
+- I implement conditions in the same way.
+
+### Functionality
+- Battery is initially 29 to run the battery tree that docks and charges to a 100.
+- The spot cleaning happens when the there is a spot to clean. No sensor is in place and no user simulation happens here.
+- Spot runs only in the first cycle and then it is set to false. For the future, a sensor can be hooked.
+- Floor cleaning simulates the sensor using user input for now. It keeps on cleaning every time the vaccum gets to
+that behavioral branch.
+- General cleaning prompts the user too and set the blackboard state accordingly.

@@ -17,6 +17,7 @@ class TreeNode:
     The base node class.
     """
     __id: NodeIdType  # Identification of the node
+    __priority: int
 
     def __init__(self):
         """
