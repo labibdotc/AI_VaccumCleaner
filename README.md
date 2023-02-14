@@ -17,7 +17,7 @@ HOME_PATH: The path to the docking station.
 ## Setup and run
 fork the project to your github and then
 ```
-git clone <http address for your repository>
+git clone <https address for your repository>
 cd AI_VaccumCleaner
 python main.py
 ```
